@@ -1,0 +1,57 @@
+{
+	"name": "Flag",
+	"plugin-id": "Sprite",
+	"sid": 552714420453543,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 980,
+						"height": 958,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5461445,
+						"collisionPoly": {
+							"points": [
+								0.1336734693877551,
+								0.13674321503131523,
+								0.5,
+								0.03444676409185804,
+								0.9173469387755102,
+								0.08350730688935282,
+								0.9102040816326531,
+								0.5,
+								0.5918367346938775,
+								0.5824634655532359,
+								0.5,
+								0.5908141962421712,
+								0.14081632653061224,
+								0.8549060542797495,
+								0.07653061224489796,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 332039699348996,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

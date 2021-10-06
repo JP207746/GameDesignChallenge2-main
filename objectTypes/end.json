@@ -1,0 +1,43 @@
+{
+	"name": "End",
+	"plugin-id": "Sprite",
+	"sid": 876185344251692,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 813883072255510
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 127,
+						"height": 20,
+						"originX": 0.3779527559055118,
+						"originY": 2.35,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6070763,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 208232060458831,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

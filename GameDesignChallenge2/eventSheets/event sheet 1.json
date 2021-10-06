@@ -1,0 +1,124 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 526021155823538,
+					"parameters": {
+						"key": 39
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Player",
+					"sid": 898175844907174,
+					"parameters": {
+						"animation": "\"Right\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "Player",
+					"sid": 250789979810004,
+					"parameters": {
+						"state": "not-mirrored"
+					}
+				}
+			],
+			"sid": 828140257244467
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 228217606539525
+				},
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 580279357140400,
+					"parameters": {
+						"key": 37
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Player",
+					"sid": 824048594547431,
+					"parameters": {
+						"animation": "\"Right\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "Player",
+					"sid": 153674966555577,
+					"parameters": {
+						"state": "mirrored"
+					}
+				}
+			],
+			"sid": 142289825156766
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 751787908352231
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Player",
+					"sid": 821842743135643,
+					"parameters": {
+						"animation": "\"Idle\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 408241518359208
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Player",
+					"sid": 183759513602004,
+					"parameters": {
+						"object": "End"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "open-url-in-new-window",
+					"objectClass": "Browser",
+					"sid": 357661415963227,
+					"parameters": {
+						"url": "\"https://raidshadowlegends.com/\"",
+						"tag": "\"NewWindow\""
+					}
+				}
+			],
+			"sid": 574677186215174
+		}
+	],
+	"sid": 482237297620431
+}

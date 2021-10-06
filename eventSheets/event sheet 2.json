@@ -1,0 +1,338 @@
+{
+	"name": "Event sheet 2",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "MinScrollY",
+			"type": "number",
+			"initialValue": "999",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 123457538434702
+		},
+		{
+			"eventType": "variable",
+			"name": "NextPlatform",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 680499532929212
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-y",
+					"objectClass": "Player",
+					"sid": 207501802061130,
+					"parameters": {
+						"comparison": 2,
+						"y-co-ordinate": "MinScrollY"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 778414031808672,
+					"parameters": {
+						"variable": "MinScrollY",
+						"value": "Player.Y"
+					}
+				}
+			],
+			"sid": 735051112556438,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 302030592351373,
+							"parameters": {
+								"first-value": "NextPlatform",
+								"comparison": 5,
+								"second-value": "ViewportTop(\"Game\")"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 186093175070966,
+							"parameters": {
+								"object-to-create": "Platform",
+								"layer": "\"Game\"",
+								"x": "random(20, LayoutWidth - 40)",
+								"y": "ViewportTop(\"Game\")",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 354083576951371,
+							"parameters": {
+								"variable": "NextPlatform",
+								"value": "ViewportTop(\"Game\") - random(15, 50)"
+							}
+						}
+					],
+					"sid": 955757727061695
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 182661199985989
+				}
+			],
+			"actions": [
+				{
+					"id": "scroll-to-position",
+					"objectClass": "System",
+					"sid": 670203638872884,
+					"parameters": {
+						"x": "460",
+						"y": "MinScrollY"
+					}
+				}
+			],
+			"sid": 760414260988647
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-screen",
+					"objectClass": "Platform",
+					"sid": 688950908379439
+				},
+				{
+					"id": "compare-y",
+					"objectClass": "Platform",
+					"sid": 775646485137163,
+					"parameters": {
+						"comparison": 4,
+						"y-co-ordinate": "ViewportBottom(\"Game\")"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Platform",
+					"sid": 277910130966522
+				}
+			],
+			"sid": 830281464409767
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-screen",
+					"objectClass": "Player",
+					"sid": 767125241552943
+				},
+				{
+					"id": "compare-y",
+					"objectClass": "Player",
+					"sid": 392981836032862,
+					"parameters": {
+						"comparison": 4,
+						"y-co-ordinate": "ViewportBottom(\"Game\")"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "reset-global-variables",
+					"objectClass": "System",
+					"sid": 145684778837554
+				},
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 406209700864328
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Player",
+					"sid": 945517757891767
+				}
+			],
+			"sid": 454888809506707
+		},
+		{
+			"eventType": "block",
+			"conditions": [],
+			"actions": [],
+			"sid": 213774979601973
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 767143362501530
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Player",
+					"sid": 871132926551082,
+					"parameters": {
+						"animation": "\"Idle\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 442150688024713
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-destroyed",
+					"objectClass": "Player",
+					"sid": 847707475785624
+				}
+			],
+			"actions": [
+				{
+					"id": "open-url-in-new-window",
+					"objectClass": "Browser",
+					"sid": 348855354643735,
+					"parameters": {
+						"url": "\"https://raidshadowlegends.com/\"",
+						"tag": "\"NewWindow\""
+					}
+				}
+			],
+			"sid": 515606917495726
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 368077521195011,
+					"parameters": {
+						"key": 85
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "Player",
+					"sid": 341611423055937,
+					"behaviorType": "Platform",
+					"parameters": {
+						"control": "jump"
+					}
+				}
+			],
+			"sid": 180463638289400
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 950781301663822,
+					"parameters": {
+						"key": 70
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "Player",
+					"sid": 150419398517242,
+					"behaviorType": "Platform",
+					"parameters": {
+						"control": "right"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "Player",
+					"sid": 641674812164029,
+					"parameters": {
+						"animation": "\"Right\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "Player",
+					"sid": 483017025651006,
+					"parameters": {
+						"state": "not-mirrored"
+					}
+				}
+			],
+			"sid": 376285290311673
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 577728595843373,
+					"parameters": {
+						"key": 67
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "Player",
+					"sid": 856793456608242,
+					"behaviorType": "Platform",
+					"parameters": {
+						"control": "left"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "Player",
+					"sid": 872285386354083,
+					"parameters": {
+						"animation": "\"Right\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "Player",
+					"sid": 622016301700600,
+					"parameters": {
+						"state": "mirrored"
+					}
+				}
+			],
+			"sid": 975125505923863
+		}
+	],
+	"sid": 795276943272977
+}
